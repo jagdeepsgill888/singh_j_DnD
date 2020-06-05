@@ -38,10 +38,10 @@
 
     puzzlePieces.forEach(piece => piece.addEventListener('dragstart', allowDrag));
 
-    dropZones.forEach(zone => {
+    for (let zone of dropZone) {}
         zone.addEventListener('dragover', allowDragOver);
         zone.addEventListener('drop', allowDrop);
-    });
+    }
     //research call, apply and bind
     changeImageSet.call(puzzleButtons[0]); //empulates a click on the first button
 })();
