@@ -40,10 +40,11 @@
 
     let droppedImage =  event.dataTransfer.getData("draggedImg");
 
+    if (event.currentTarget.children.length === 0) {
     event.target.appendChild(document.querySelector(`#${droppedImage}`));
-    //debugger;
+    debugger;
     }
-
+  }
 
 
     // click on the bottom buttons to change the puzzle image we're working with
