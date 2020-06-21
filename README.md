@@ -5,7 +5,7 @@ A  fun puzzle game with cool puzzle pieces.
 Just pick a puzzle game from below that you like the most.
 Pull the puzzle pieces from the left side and drop at in the game
 board. Voilà ! You just solved a beautiful puzzle. You may move
-on to the next puzzle game by clicking the a puzzle board you desire.
+on to the next puzzle game by clicking a puzzle board you desire.
 
 ## Author
 Jagdeep Singh
