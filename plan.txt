@@ -1,0 +1,21 @@
+Two Bugs that needs to be fixed
+
+
+bug 1 : dropzone can contain more than one puzzle piece.
+
+Should : only contain 1 puzzle piece at a time.
+
+fix : Need to limit the lenght  of the children to "0" possibly in the function
+allowdrop(event) in order to solve this issue.
+
+
+
+
+Bug 2 :drop zone puzzle pieces does not reset after changing to
+       another puzzle game board.
+
+Should : reset after picking another puzzle game baord.
+
+Fix : In order to fix this , we need to create a function that will reset the puzzle pieces
+and bring them back to their original place;firstChild & removeChild could be used as well to 
+solve this issue.
