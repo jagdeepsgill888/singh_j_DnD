@@ -9,6 +9,8 @@
     // add event handling here -> how is the user going to use our app?
     // what triggers do we need?
 
+
+
     function changeImageSet() {
         // change all the image elements on the page -> draggable image sources,
         // let newBackgroundImage = `images/backGround${this.dataset.bgkey}.jpg`; (contenced down to one line)
@@ -18,8 +20,23 @@
         });
 
         gameBoard.style.backgroundImage = `url(images/backGround${this.dataset.bgkey}.jpg)`;
+        resetPuzzlePieces ();
     }
     // and set the drop zone background
+
+  // reset the selection puzzle pieces after changing the game puzzle pieces
+    function resetPuzzlePieces ()
+    {
+      let puzzlePlain = document.querySelector(".puzzle-pieces");
+      for (let zone of dropZones) {
+        console.log(zone.firstChild);
+        if(zone.firstChild){
+          puzzlePlain.appendChild(zone.firstChild);
+        }
+
+      }
+    }
+
 
     // debugger;
     function allowDrag(event) {
@@ -51,6 +68,16 @@
     puzzleButtons.forEach(button => button.addEventListener('click', changeImageSet));
 
     puzzlePieces.forEach(piece => piece.addEventListener('dragstart', allowDrag));
+
+    dropZones.forEach((dropZone) => {
+      while (dropZone.firstChild) {
+
+        let currentChild = dropZone.removeChild(dropZone.firstChild);
+        piecesPlain.appendChild(currentChild);
+      }
+
+    })
+
 
     for (let zone of dropZones) {
         zone.addEventListener('dragover', allowDragOver);
